@@ -75,7 +75,7 @@ int main()
 
 
 // Sample Input : 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
-// Sample Output : 3
+// Sample Output : 5
 // T(C) = O(n)
 // S(C) = O(height)
 

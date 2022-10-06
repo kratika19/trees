@@ -72,3 +72,10 @@ int main()
     levelOrderTraversal(root);
     return 0;
 }
+
+
+// Sample Input : 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+// Sample Output : 1
+//                 3 5
+//                 7 11 17
+

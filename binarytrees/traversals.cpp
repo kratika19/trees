@@ -73,13 +73,15 @@ int main()
     node *root = NULL;
     root = buildTree(root);
 
-    cout << "Reverse Level Order Traversal : ";
+    cout << "In Order Traversal: ";
     inOrderTraversal(root);
     cout<<endl;
 
+    cout << "Pre Order Traversal: ";
     preOrderTraversal(root);
     cout<<endl;
 
+    cout << "Post Order Traversal: ";
     postOrderTraversal(root);
     cout<<endl;
     
@@ -87,4 +89,6 @@ int main()
 }
 
 // Sample Input : 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
-// Sample Output : 7 3 11 1 17 5
+// Sample Output : In Order Traversal: 7 3 11 1 17 5 
+//                 Pre Order Traversal: 1 3 7 11 5 17 
+//                 Post Order Traversal: 7 11 3 17 5 1 

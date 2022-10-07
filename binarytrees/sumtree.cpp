@@ -55,13 +55,15 @@ pair<bool, int> sumTreeFast(node *root)
 
     pair<bool, int> left = sumTreeFast(root->left);
     pair<bool, int> right = sumTreeFast(root->right);
-    
     pair<bool, int> ans;
 
-    ans.second = left.second + right.second;
+    bool cond = root->data == left.second + right.second;
 
-    if (root->data == ans.second)
+    if (cond && left.first && right.first)
+    {
         ans.first = true;
+        ans.second = 2 * root->data;
+    }
     else
         ans.first = false;
 
@@ -78,7 +80,8 @@ int main()
     node *root = NULL;
     root = buildTree(root);
 
-    cout<< endl << "Tree Sum: " << sumTree(root) << endl;
+    cout << endl
+         << "Tree Sum: " << sumTree(root) << endl;
     return 0;
 }
 
